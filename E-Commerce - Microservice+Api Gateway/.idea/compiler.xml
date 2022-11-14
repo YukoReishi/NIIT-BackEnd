@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Laptop" />
+        <module name="ShoppingApp" />
+        <module name="Mobiles" />
+        <module name="ShoppingWebServer" />
+        <module name="Customer" />
+        <module name="ShoppingApiGateWay" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Customer" target="17" />
+      <module name="Laptop" target="17" />
+      <module name="Mobiles" target="17" />
+      <module name="ShoppingApiGateWay" target="17" />
+      <module name="ShoppingApp" target="17" />
+      <module name="ShoppingWebServer" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Customer" options="-parameters" />
+      <module name="Laptop" options="-parameters" />
+      <module name="Mobiles" options="-parameters" />
+      <module name="ShoppingApiGateWay" options="-parameters" />
+      <module name="ShoppingApp" options="-parameters" />
+      <module name="ShoppingWebServer" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,34 @@
+server:
+  port: 8500
+
+eureka:
+  instance:
+    hostname: localhost
+
+spring:
+  application:
+    name: Shopping-api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: ShoppingApp
+          uri: http://localhost:9000/
+          predicates:
+            - Path=/**
+        - id: Customer-Service
+          uri: http://localhost:9002/
+          predicates:
+            - Path=/Customer/**
+        - id: Mobile-Service
+          uri: http://localhost:9004/
+          predicates:
+            - Path=/mobile/**
+        - id: Order-Service
+          uri: http://localhost:9005/
+          predicates:
+            - Path=/Order/**
+
+
+
+
+

@@ -1,0 +1,1 @@
+CREATE TABLE employee(employee_id serial PRIMARY KEY,employee_name VARCHAR(100),employee_salary int);

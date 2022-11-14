@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Customer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Customer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Laptop/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Laptop/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Mobiles/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Mobiles/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ShoppingApiGateWay/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ShoppingApiGateWay/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ShoppingApp/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ShoppingApp/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ShoppingWebServer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ShoppingWebServer/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

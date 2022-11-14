@@ -1,0 +1,82 @@
+server:
+  port: 8500
+
+eureka:
+  instance:
+    hostname: localhost
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: Client-Service
+          uri: http://localhost:9000/
+          predicates:
+            - Path=/BookMyTrip/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: Client-Service
+                fallbackuri: forward:/clientServiceFallback
+        - id: Flight-Service
+          uri: http://localhost:9001/
+          predicates:
+            - Path=/flight/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: Flight-Service
+                fallbackuri: forward:/flightServiceFallback
+        - id: Bus-Service
+          uri: http://localhost:9003/
+          predicates:
+            - Path=/bus/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: Bus-Service
+                fallbackuri: forward:/busServiceFallback
+        - id: Train-Service
+          uri: http://localhost:9002/
+          predicates:
+            - Path=/train/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: Train-Service
+                fallbackuri: forward:/trainServiceFallback
+        - id: Hotel-Service
+          uri: http://localhost:9004/
+          predicates:
+            - Path=/hotel/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: Hotel-Service
+                fallbackuri: forward:/hotelServiceFallback
+        - id: HYSTRIX-DASHBOARD
+          uri: http://localhost:9007/
+          predicates:
+            Path=/**
+
+
+
+hystrix:
+  command:
+    fallbackcmd:
+      execution:
+        isolation:
+          thread:
+            timeoutInMillieseconds: 5000
+
+  dashboard:
+    proxy-stream-allow-list: "*"
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
